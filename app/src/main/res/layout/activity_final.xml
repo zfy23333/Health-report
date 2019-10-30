@@ -5,344 +5,505 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/bg">
         <RelativeLayout
             android:id="@+id/tw"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2">
+            android:layout_weight="1">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="您的健康报告如下"
                 android:textSize="36sp"
+                android:textColor="#FFFFFF"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="6">
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:background="#1A94E6"
+            android:padding="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:orientation="vertical"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp">
-
+                android:layout_weight="1"
+                android:background="#338FCC">
                 <LinearLayout
-                    android:id="@+id/ll_1"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_weight="1"
-                    android:background="#338FCC"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:id="@+id/iv_1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#338FCC">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center">
+                        <View
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_centerVertical="true"
-                            android:src="@drawable/zf" />
-
+                            android:background="@drawable/zf" />
                         <TextView
-                            android:id="@+id/tv001"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toRightOf="@+id/iv_1"
                             android:text="体脂率"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/tv002"
-                            android:layout_width="220dp"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toRightOf="@+id/tv001"
-                            android:gravity="center_horizontal"
-                            android:text="28.4%"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toRightOf="@+id/tv002"
-                            android:text="偏瘦"
-                            android:textColor="#FFFFFF"
-                            android:textSize="20sp" />
-                    </RelativeLayout>
+                            android:textSize="20sp"
+                            android:textColor="#FFFFFF"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_fat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_fattext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
                 </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/ll_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:background="#3C8DC4"
-                    android:layout_marginBottom="20dp">
+            </LinearLayout>
+            <LinearLayout
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/iv_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="#3C8DC4">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#3C8DC4">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <View
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/s"
-                            android:layout_centerVertical="true"/>
+                            android:background="@drawable/s"/>
                         <TextView
-                            android:id="@+id/tv011"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="水分率"
                             android:textSize="20sp"
-                            android:layout_toRightOf="@+id/iv_2"
-                            android:layout_centerVertical="true"
                             android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:id="@+id/tv012"
-                            android:layout_width="220dp"
-                            android:layout_height="wrap_content"
-                            android:text="70.0%"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv011"
-                            android:layout_centerVertical="true"
-                            android:gravity="center_horizontal"
-                            android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="正常"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv012"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                    </RelativeLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_water"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_watertext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="#2B91D5">
                 <LinearLayout
-                    android:id="@+id/ll_3"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
                     android:background="#2B91D5"
-                    android:layout_marginBottom="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/iv_3"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <View
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/jr"
-                            android:layout_centerVertical="true"/>
-                        <TextView
-                            android:id="@+id/tv021"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="肌肉率"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/iv_3"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:id="@+id/tv022"
-                            android:layout_width="220dp"
-                            android:layout_height="wrap_content"
-                            android:text="56.4%"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv021"
-                            android:layout_centerVertical="true"
-                            android:gravity="center_horizontal"
-                            android:textColor="#FFFFFF"/>
+                            android:background="@drawable/jr"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="正常"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv022"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                    </RelativeLayout>
+                            android:text="肌肉量"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_muscle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_muscletext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:layout_weight="1"/>
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="#2B91D5">
                 <LinearLayout
-                    android:id="@+id/ll_4"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:background="#2B91D5"
-                    android:layout_marginBottom="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/iv_4"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#2B91D5">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <View
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/gk"
-                            android:layout_centerVertical="true"/>
+                            android:background="@drawable/gk"/>
                         <TextView
-                            android:id="@+id/tv031"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="骨质    "
                             android:textSize="20sp"
-                            android:layout_toRightOf="@+id/iv_4"
-                            android:layout_centerVertical="true"
                             android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:id="@+id/tv032"
-                            android:layout_width="220dp"
-                            android:layout_height="wrap_content"
-                            android:text="2.0"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv031"
-                            android:layout_centerVertical="true"
-                            android:gravity="center_horizontal"
-                            android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="正常"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv032"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                    </RelativeLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_sclerotin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_sclerotintext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="#1A94E6">
                 <LinearLayout
-                    android:id="@+id/ll_5"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:background="#1A94E6"
-                    android:layout_marginBottom="20dp">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/iv_5"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#1A94E6">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <View
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/dx"
-                            android:layout_centerVertical="true"/>
+                            android:background="@drawable/dx" />
                         <TextView
-                            android:id="@+id/tv041"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="代谢    "
                             android:textSize="20sp"
-                            android:layout_toRightOf="@+id/iv_5"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:id="@+id/tv042"
-                            android:layout_width="220dp"
-                            android:layout_height="wrap_content"
-                            android:text="1200.0"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv041"
-                            android:layout_centerVertical="true"
-                            android:gravity="center_horizontal"
-                            android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="正常"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv042"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                    </RelativeLayout>
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_metabolism"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_metabolismtext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="#1A94E6">
                 <LinearLayout
-                    android:id="@+id/ll_6"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:background="#1A94E6"
-                    android:layout_marginBottom="20dp">
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/iv_6"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#1A94E6">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <View
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/all"
-                            android:layout_centerVertical="true"/>
-                        <TextView
-                            android:id="@+id/tv051"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="总分    "
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/iv_6"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                        <TextView
-                            android:id="@+id/tv052"
-                            android:layout_width="220dp"
-                            android:layout_height="wrap_content"
-                            android:text="1200.0"
-                            android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv051"
-                            android:layout_centerVertical="true"
-                            android:gravity="center_horizontal"
-                            android:textColor="#FFFFFF"/>
+                            android:background="@drawable/bmi" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="正常"
+                            android:text="BMI     "
                             android:textSize="20sp"
-                            android:layout_toRightOf="@+id/tv052"
-                            android:layout_centerVertical="true"
-                            android:textColor="#FFFFFF"/>
-                    </RelativeLayout>
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_bmi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_bmitext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="#1A94E6">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#1A94E6">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/height" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="身高(cm)"
+                            android:textSize="19sp"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_height"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_heighttext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="#1A94E6">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#1A94E6">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/weight" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体重(kg)"
+                            android:textSize="20sp"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_weighttext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="#1A94E6">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#1A94E6">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/all" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="总分     "
+                            android:textSize="20sp"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_all"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/tv_alltext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_weight="2"
-            android:gravity="center">
-            <Button
-                android:id="@+id/btn_home"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00ABFF">
+            <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_2"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="10dp"
-                android:text="返回主页"
-                android:textSize="36sp"/>
-            <Button
-                android:id="@+id/btn_retry"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/btn_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home"
+                    android:textSize="36sp"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_2"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="5dp"
-                android:text="再测一次"
-                android:textSize="36sp"/>
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/btn_retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/retry"
+                    android:textSize="36sp"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

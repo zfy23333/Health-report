@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#00ABFF">
+    android:layout_height="match_parent">
     <Button
         android:id="@+id/btn_back"
         android:layout_width="50dp"
@@ -18,7 +17,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="填写信息"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:gravity="center"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,13 +27,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="您的性别"
+                android:text="您的性别（男为1，女为0）"
                 android:textSize="24sp"/>
             <EditText
+                android:id="@+id/et_sex"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="请输入您的性别"
-                android:textSize="24sp"/>
+                android:hint="请输入您性别所对应的数"
+                android:textSize="24sp"
+                android:inputType="number"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,11 +48,12 @@
                 android:text="您的年龄"
                 android:textSize="24sp"/>
             <EditText
+                android:id="@+id/et_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入您的年龄"
                 android:inputType="number"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,8 +64,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
-                android:text="您的身高"/>
+                android:text="您的身高(cm)" />
             <EditText
+                android:id="@+id/et_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入您的身高"
@@ -78,9 +81,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="您的体重"
+                android:text="您的体重(kg)"
                 android:textSize="24sp"/>
             <EditText
+                android:id="@+id/et_weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入您的体重"
