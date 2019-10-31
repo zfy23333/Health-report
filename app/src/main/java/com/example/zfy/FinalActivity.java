@@ -33,7 +33,7 @@ public class FinalActivity extends AppCompatActivity {
         double bmi = (weight * 10000) / (height * height);
         double fat,water,muscle,sclerotin,metabolism,all,standardweight;
         int bmigrade,fatgrade,watergrade,musclegrade,sclerotingrade,metabolismgrade;
-        String heighttext,weighttext,bmitext,fattext,muscletext,watertext,sclerotintext,metabolismtext,alltext;
+        String heighttext,weighttext,bmitext,fattext,muscletext,watertext,sclerotintext,metabolismtext,alltext,tip;
         if (sex == 1) {
             fat = (1.2 * bmi + 0.23 * age - 5.4 - 10.8) / 100;
             muscle = 78 /(2 * weight);
@@ -162,13 +162,22 @@ public class FinalActivity extends AppCompatActivity {
                 metabolismgrade = 70;
             }
             all = bmigrade * 0.5 + fatgrade * 0.1 + musclegrade * 0.1 + watergrade * 0.1 + sclerotingrade * 0.1 + metabolismgrade * 0.1;
-            if (all < 70)
+            if (all < 70) {
                 alltext = "较差";
-            else if (70 <= all && all < 85)
+                tip = "您的身体情况不理想，请注意饮食，适度加强运动";
+            }
+            else if (70 <= all && all < 85) {
                 alltext = "良好";
-            else if (85 <= all && all < 100)
+                tip = "您的身体情况不错，请多注意膳食，保持运动频率";
+            }
+            else if (85 <= all && all < 100) {
                 alltext = "优秀";
-            else alltext = "???";
+                tip = "您的身体情况非常理想，请继续保持";
+            }
+            else {
+                alltext = "???";
+                tip = "???";
+            }
             DecimalFormat dfone = new DecimalFormat("#.0");
             DecimalFormat dfthree = new DecimalFormat("#.000");
             NumberFormat nf = NumberFormat.getPercentInstance();
@@ -211,8 +220,10 @@ public class FinalActivity extends AppCompatActivity {
             TextView AllTv = (TextView) findViewById(R.id.tv_all);
             String alldata = dfone.format(all);
             AllTv.setText(alldata);
-            TextView AlltexttTv = (TextView) findViewById(R.id.tv_alltext);
-            AlltexttTv.setText(alltext);
+            TextView AlltextTv = (TextView) findViewById(R.id.tv_alltext);
+            AlltextTv.setText(alltext);
+            TextView TipTv = (TextView) findViewById(R.id.tv_tip);
+            TipTv.setText(tip);
         }
         else if (sex == 0) {
             fat = (1.2 * bmi + 0.23 * age - 5.4) / 100;
@@ -342,13 +353,23 @@ public class FinalActivity extends AppCompatActivity {
                 metabolismgrade = 70;
             }
             all = bmigrade * 0.5 + fatgrade * 0.1 + musclegrade * 0.1 + watergrade * 0.1 + sclerotingrade * 0.1 + metabolismgrade * 0.1;
-            if (all < 70)
+            if (all < 70) {
                 alltext = "较差";
-            else if (70 <= all && all < 85)
+                tip = "您的身体情况不理想，请注意饮食，适度加强运动";
+            }
+            else if (70 <= all && all < 85) {
                 alltext = "良好";
-            else if (85 <= all && all < 100)
+                tip = "您的身体情况不错，请多注意膳食，保持运动频率";
+            }
+            else if (85 <= all && all < 100) {
                 alltext = "优秀";
-            else alltext = "???";
+                tip = "您的身体情况非常理想，请继续保持";
+            }
+            else {
+                alltext = "???";
+                tip = "???";
+            }
+
             DecimalFormat dfone = new DecimalFormat("#.0");
             DecimalFormat dfthree = new DecimalFormat("#.000");
             NumberFormat nf = NumberFormat.getPercentInstance();
@@ -391,8 +412,10 @@ public class FinalActivity extends AppCompatActivity {
             TextView AllTv = (TextView) findViewById(R.id.tv_all);
             String alldata = dfone.format(all);
             AllTv.setText(alldata);
-            TextView AlltexttTv = (TextView) findViewById(R.id.tv_alltext);
-            AlltexttTv.setText(alltext);
+            TextView AlltextTv = (TextView) findViewById(R.id.tv_alltext);
+            AlltextTv.setText(alltext);
+            TextView TipTv = (TextView) findViewById(R.id.tv_tip);
+            TipTv.setText(tip);
         }
 
         mBtnRetry = (Button) findViewById(R.id.btn_retry);
